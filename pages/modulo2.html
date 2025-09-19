@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2: Prevención Sísmica</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Estilos específicos para la página del módulo */
+        body {
+            background-color: #f0f4f7;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .module-page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: linear-gradient(to right, #2ecc71, #27ae60);
+            color: #ecf0f1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .module-page-header .back-link {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-size: 1.2em;
+            transition: transform 0.2s;
+        }
+
+        .module-page-header .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .module-page-header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .module-container {
+            padding: 30px;
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-card {
+            background-color: #f8f9fa;
+            border-left: 5px solid #2ecc71;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .content-card h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .content-card p {
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .image-full {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 25px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .checklist {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            background: #eafaf1;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid #2ecc71;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            color: #2ecc71;
+            font-size: 1.5em;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="module-page-header">
+        <a href="../principal.html" class="back-link">&#8592; Regresar</a>
+        <h1>Módulo 2: Prevención Sísmica</h1>
+        <div></div>
+    </header>
+
+    <main class="module-container">
+
+        <section class="content-card">
+            <h2>¿Qué es la Prevención Sísmica?</h2>
+            <p>La prevención sísmica es el conjunto de acciones y medidas que se toman para reducir los riesgos y los posibles daños que puede causar un terremoto. Su objetivo es salvar vidas y proteger propiedades, enfocándose en la preparación antes de que ocurra un sismo.</p>
+        </section>
+
+        <img src="../assest/images/prevencion sis.jpg" alt="Preparación para un sismo" class="image-full">
+
+        <section class="content-card">
+            <h2>Acciones Clave para la Prevención</h2>
+            <p>La preparación es una responsabilidad de todos. Aquí tienes una lista de acciones importantes que puedes tomar hoy mismo:</p>
+            <ul class="checklist">
+                <li>**Identifica zonas seguras:** Dentro de tu hogar, escuela o lugar de trabajo, encuentra los lugares más seguros, como debajo de una mesa resistente o lejos de ventanas.</li>
+                <li>**Prepara una mochila de emergencia:** Debe incluir agua, alimentos no perecederos, un botiquín de primeros auxilios, linterna, radio a pilas y copias de documentos importantes.</li>
+                <li>**Elabora un plan familiar de emergencia:** Reúnete con tu familia para acordar puntos de encuentro y formas de comunicación en caso de que se separen.</li>
+                <li>**Participa en simulacros:** Practicar te ayudará a saber cómo reaccionar de manera automática y segura durante un evento real.</li>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <h2>Asegura tus Muebles</h2>
+            <p>Los objetos que se caen son una de las principales causas de lesiones durante un sismo. Asegura los muebles altos, estanterías y cuadros a las paredes para evitar que se derrumben.</p>
+            <img src="../assest/images/mueble.jpg" alt="Asegurar muebles" class="image-full">
+        </section>
+
+    </main>
+
+</body>
+</html>

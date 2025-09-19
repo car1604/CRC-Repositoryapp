@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3: Sismicidad en Nicaragua</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Estilos específicos para la página del módulo */
+        body {
+            background-color: #f0f4f7;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .module-page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: linear-gradient(to right, #e74c3c, #c0392b);
+            color: #ecf0f1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .module-page-header .back-link {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-size: 1.2em;
+            transition: transform 0.2s;
+        }
+
+        .module-page-header .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .module-page-header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .module-container {
+            padding: 30px;
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-card {
+            background-color: #f8f9fa;
+            border-left: 5px solid #e74c3c;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .content-card h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .content-card p {
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .image-full {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 25px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-half {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-right {
+            float: right;
+            margin-left: 20px;
+        }
+
+        .image-left {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .list-style-none {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .list-style-none li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .list-style-none li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="module-page-header">
+        <a href="../principal.html" class="back-link">&#8592; Regresar</a>
+        <h1>Módulo 3: Sismicidad en Nicaragua</h1>
+        <div></div>
+    </header>
+
+    <main class="module-container">
+
+        <section class="content-card">
+            <h2>Contexto Geológico de Nicaragua</h2>
+            <p>Nicaragua se encuentra en una región de alta actividad sísmica y volcánica debido a su ubicación en el límite de la Placa de Cocos y la Placa del Caribe. Esta zona, conocida como el <strong>"Cinturón de Fuego del Pacífico"</strong>, provoca sismos de subducción, sismos volcánicos y sismos locales en fallas geológicas.</p>
+        </section>
+
+        <img src="../assest/images/plac.jpg" alt="Mapa de placas tectónicas en Nicaragua" class="image-full">
+
+        <section class="content-card clearfix">
+            <h2>Sismos Históricos Importantes</h2>
+            <p>La historia de Nicaragua está marcada por sismos devastadores que han influido en su desarrollo urbano y en la conciencia de su población. Conocerlos es fundamental para entender la importancia de la prevención.</p>
+            <img src="../assest/images/managua.jpg" alt="Terremoto de Managua 1972" class="image-half image-right">
+            <ul class="list-style-none">
+                <li>**Terremoto de Managua (1972):** Con una magnitud de 6.2 en la escala de Richter, este sismo destruyó casi por completo el centro de la capital y causó miles de víctimas.</li>
+                <li>**Terremoto de Managua (1931):** Un sismo de 5.6 de magnitud que también destruyó gran parte de la ciudad y provocó un gran incendio.</li>
+                <li>**Terremoto de Nandaime (2000):** Un sismo de 6.0 que afectó principalmente la zona sur del país, causando daños estructurales significativos en viviendas y edificios.</li>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <h2>Vigilancia y Monitoreo Sísmico</h2>
+            <p>El Instituto Nicaragüense de Estudios Territoriales (INETER) es la institución encargada de la vigilancia sísmica y volcánica en el país. Su red de estaciones monitorea la actividad constantemente para proporcionar información vital a la población y a las autoridades en caso de una emergencia.</p>
+            <img src="../assest/images/sismografo.jpeg" alt="Estación sismológica de INETER" class="image-full">
+        </section>
+
+    </main>
+
+</body>
+</html>

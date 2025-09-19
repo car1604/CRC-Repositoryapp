@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepárate | CRC</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos para esta página */
+        body {
+            background-color: #f0f4f7;
+        }
+
+        /* 🟢 Estilo para el encabezado de la página de "Prepárate" */
+        .preparate-header-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: linear-gradient(to right, #2c3e50, #34495e); /* Degradado de azul oscuro */
+            border-bottom: 2px solid #5d6d7e;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            color: #ecf0f1;
+        }
+        
+        .preparate-header-bar .logo {
+            height: 50px;
+            margin-right: 10px;
+            filter: brightness(0) invert(1); /* Pone el logo en blanco */
+        }
+
+        .preparate-header-bar .title-section h2,
+        .preparate-header-bar .title-section p {
+            color: #ecf0f1;
+        }
+
+        .preparate-container {
+            padding: 20px;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .preparate-content-title {
+            text-align: center;
+            color: #FF9800;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-card {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .image-card p {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .preparate-header-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .preparate-header-bar .logo-container {
+                justify-content: center;
+            }
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="preparate-header-bar">
+      <a href="../principal.html" class="back-arrow" style="color: #ecf0f1;">&#8592;</a>
+        <div class="logo-container">
+            <img src="../assest/images/Azcalcalli logo blanco.png" alt=" CRC" class="logo">
+            <div class="title-section">
+            
+                <p>Prepárate</p>
+            </div>
+        </div>
+        <div></div>
+    </header>
+
+    <main class="preparate-container">
+        <h1 class="preparate-content-title">¡Prepárate para Actuar!</h1>
+        
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="../assest/images/mochila.jpg" alt="Kit de Emergencia">
+                <p>Arma tu mochila de emergencia</p>
+            </div>
+
+            <div class="image-card">
+                <img src="../assest/images/plan.png" alt="Plan Familiar">
+                <p>Elabora tu plan familiar</p>
+            </div>
+
+            <div class="image-card">
+                <img src="../assest/images/simulacro.jpg" alt="Simulacro">
+                <p>Practica simulacros en casa o escuela</p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

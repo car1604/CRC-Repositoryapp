@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot de Emergencias</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+ .chat-container {
+max-width: 600px;
+margin: 20px auto;
+ background-color: #fff;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ display: flex;
+ flex-direction: column;
+ height: 80vh;
+ }
+ .chat-header {
+ background-color: #4CAF50;
+color: white;
+ padding: 15px;
+ text-align: center;
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+ }
+ .chat-box {
+flex-grow: 1;
+ padding: 20px;
+ overflow-y: auto;
+ display: flex;
+ flex-direction: column;
+ gap: 15px;
+ }
+ .message {
+padding: 10px;
+ border-radius: 15px;
+ max-width: 80%;
+ word-wrap: break-word;
+ }
+ .user-message {
+ background-color: #e0e0e0;
+ align-self: flex-end;
+ text-align: right;
+ }
+ .bot-message {
+ background-color: #dcf8c6;
+ align-self: flex-start;
+ }
+ .chat-input {
+ display: flex;
+padding: 10px;
+ border-top: 1px solid #ccc;
+ }
+ .chat-input input {
+ flex-grow: 1;
+ padding: 10px;
+ border-radius: 20px;
+ border: 1px solid #ccc;
+ margin-right: 10px;
+ }
+ .chat-input button {
+ background-color: #4CAF50;
+ color: white;
+ border: none;
+ border-radius: 50%;
+ width: 40px;
+ height: 40px;
+ cursor: pointer;
+ font-size: 1.2em;
+ }
+ </style>
+</head>
+<body>
+ <header class="actua-header">
+ <a href="../principal.html" class="back-arrow">&#8592;</a>
+ <div class="logo-container">
+<img src="../assest/images/logo.jpg" alt="Logo Educietistas" class="logo">
+ <div class="title-section">
+ <h2>CRC</h2>
+<p>Chatbot</p>
+ </div>
+</div>
+ </header>
+ <main class="chat-container">
+<div class="chat-header">
+ <h3>Asistente de Emergencias</h3>
+ </div>
+ <div class="chat-box" id="chat-box">
+<div class="message bot-message">Hola, soy tu asistente de emergencias. Puedes preguntarme sobre sismos, huracanes, a quién llamar y más.</div>
+ </div>
+<div class="chat-input">
+ <input type="text" id="user-input" placeholder="Escribe tu pregunta...">
+ <button id="send-btn">➔</button>
+ </div>
+</main>
+<script src="../main.js"></script>
+</body>
+</html>

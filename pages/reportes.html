@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reporte de Desastres Naturales</title>
+<link rel="stylesheet" href="../styles.css">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+</head>
+<body>
+ <header>
+</header>
+
+<main>
+ <div class="report-page-container">
+ <h2>Reporta un Desastre</h2>
+<p>Ayúdanos a registrar eventos para mantener a la comunidad informada.</p>
+
+<form id="report-form">
+<div class="form-group">
+ <label for="disasterType">Tipo de Desastre:</label>
+ <select id="disasterType" name="disasterType" required>
+ <option value="">Selecciona uno...</option>
+<option value="Sismo">Sismo</option>
+<option value="Huracan">Huracán</option>
+ <option value="Inundacion">Inundación</option>
+ <option value="Tsunami">Tsunami</option>
+ <option value="Flujo de lava">Flujo de lava</option>
+<option value="Tornado">Tornado</option>
+</select>
+ </div>
+<div class="form-group">
+<label for="location">Ubicación (ciudad, colonia, etc.):</label>
+<input type="text" id="location" name="location" readonly>
+</div>
+
+<div class="form-group">
+<label for="details">Detalles adicionales:</label>
+<textarea id="details" name="details" rows="4"></textarea>
+ </div>
+
+<button type="submit" class="submit-btn">Enviar Reporte</button>
+ </form>
+ 
+ <p id="message"></p>
+
+<h3>Ubicación del Reporte</h3>
+ <div id="map-container"></div>
+ </div>
+</main>
+
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+ <script src="../main.js"></script>
+</body>
+</html>

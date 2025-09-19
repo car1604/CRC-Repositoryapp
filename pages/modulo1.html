@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1: Introducción</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Estilos específicos para la página del módulo */
+        body {
+            background-color: #f0f4f7;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .module-page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: linear-gradient(to right, #3498db, #2980b9);
+            color: #ecf0f1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .module-page-header .back-link {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-size: 1.2em;
+            transition: transform 0.2s;
+        }
+
+        .module-page-header .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .module-page-header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .module-container {
+            padding: 30px;
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-card {
+            background-color: #f8f9fa;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .content-card h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .content-card p {
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .image-full {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 25px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-half {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-right {
+            float: right;
+            margin-left: 20px;
+        }
+
+        .image-left {
+            float: left;
+            margin-right: 20px;
+        }
+
+        /* Limpiar el float */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #ecf0f1;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="module-page-header">
+        <a href="../principal.html" class="back-link">&#8592; Regresar</a>
+        <h1>Módulo 1: Introducción</h1>
+        <div></div> </header>
+
+    <main class="module-container">
+
+        <section class="content-card">
+            <h2>¿Qué es un Desastre Natural?</h2>
+            <p>Un desastre natural es un evento o fenómeno que ocurre en la naturaleza y que puede causar daños significativos a la vida, la propiedad y el medio ambiente.</p>
+        </section>
+
+        <img src="../assest/images/desastres-naturales.jpg" alt="Imagen introductoria del módulo 1" class="image-full">
+
+        <section class="content-card clearfix">
+            <h2>Tipos de Desastres Naturales</h2>
+            <p>Los desastres naturales se clasifican en varias categorías principales. En nuestro curso, nos centraremos en los más relevantes para nuestra región.</p>
+            <img src="../assest/images/tipos.jpg" alt="Tipos geológicos" class="image-half image-right">
+            <ul>
+                <li>Geológicos: Incluyen sismos, erupciones volcánicas y tsunamis. Son eventos que se originan en el interior de la Tierra.</li>
+                <li>Hidrometeorológicos: Son fenómenos atmosféricos o hídricos como huracanes, inundaciones, sequías y tormentas.</li>
+                <li>Biológicos: Se refieren a eventos como pandemias o plagas que afectan a la salud humana o la agricultura.</li>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <h2>Importancia de la Preparación</h2>
+            <p>Estar informados y preparados es nuestra mejor defensa. El conocimiento no solo nos permite actuar de manera segura durante una emergencia, sino que también nos ayuda a construir comunidades más resilientes.</p>
+        </section>
+
+    </main>
+
+</body>
+</html>

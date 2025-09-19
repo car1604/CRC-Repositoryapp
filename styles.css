@@ -1,0 +1,506 @@
+/* Estilos para el Login */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.login-form button:hover {
+    background-color: #45a049;
+}
+.message {
+    margin-top: 15px;
+    color: red;
+}
+
+/* Estilos para la página principal (index.html) */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.title-section h1 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #444;
+}
+
+.title-section p {
+    margin: 0;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.subtitle {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.subtitle h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.subtitle p {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.info-icon img {
+    height: 24px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.modules {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.module-card {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+}
+
+.module-card img {
+    height: 80px;
+}
+
+.module-card h3 {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+.informate { background-color: #FFC107; }
+.preparate { background-color: #FF9800; }
+.actua { background-color: #E53935; }
+
+.course-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.course-content h2 {
+    margin-top: 0;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.course-module {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.course-module img {
+    width: 100%;
+    max-width: 120px;
+}
+
+.course-module h4 {
+    margin: 10px 0 5px;
+}
+
+.course-module p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.module1 { background-color: #64B5F6; }
+.module2 { background-color: #4DD0E1; }
+.module3 { background-color: #81C784; }
+.module4 { background-color: #FFEB3B; }
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .info-icon {
+        display: none; /* Ocultar en móviles para simplificar */
+    }
+    .modules {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .module-card {
+        margin: 0;
+    }
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para la página Actúa (actua.html) */
+.actua-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.actua-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.actua-header .back-arrow {
+    font-size: 2em;
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+}
+
+.actua-header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.actua-header .logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.actua-header .title-section h2, .actua-header .title-section p {
+    margin: 0;
+}
+
+.title-actua {
+    text-align: center;
+    color: #E53935;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.action-section {
+    margin-bottom: 20px;
+    background-color: #E53935;
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.action-box {
+    background-color: #d32f2f;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.action-box h4 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.action-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.action-item img {
+    height: 80px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.action-item p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+}
+
+.supply-kit {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.supply-kit h2 {
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.kit-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item p {
+    background-color: #f0f0f0;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* Estilos para las funcionalidades adicionales */
+.extra-features {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.extra-features h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.feature-card {
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.feature-card h4 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.trivia { background-color: #ffe5b4; }
+.reportes { background-color: #e0f2f1; }
+.chatbot { background-color: #b3e5fc; }
+
+@media (max-width: 768px) {
+    .features-grid {
+        flex-direction: column;
+    }
+}
+
+/* Estilos para las cabeceras de las páginas internas */
+.actua-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #0de6f571;
+    border-bottom: 2px solid #6ca4dd;
+}
+
+.actua-header .back-arrow {
+    font-size: 2em;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s;
+}
+
+.actua-header .back-arrow:hover {
+    transform: translateX(-5px);
+}
+
+.actua-header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.actua-header .logo-container .logo {
+    height: 50px;
+}
+
+.actua-header .title-section h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.actua-header .title-section p {
+    margin: 0;
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* ==================== Estilos para la sección de Reportes ==================== */
+
+/* Contenedor principal de la página de reportes */
+.report-page-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #f0f4f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el formulario */
+.report-form {
+    display: grid;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #dc3545; /* Rojo vibrante */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #c82333;
+}
+
+/* 🟢 ¡¡ESTA ES LA SOLUCIÓN AL PROBLEMA DEL MAPA!! */
+#map-container {
+    height: 400px; /* Puedes ajustar la altura según tus preferencias */
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Mensaje de estado del reporte */
+#message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
+
+

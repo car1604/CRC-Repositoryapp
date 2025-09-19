@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRC | Iniciar Sesión</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      color: #ecf0f1;
+    }
+    .auth-container {
+      width: 90%;
+      max-width: 380px;
+      background-color: #4a667b;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .logo-login {
+      width: 120px;
+      height: auto;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    }
+    .auth-container h2 {
+      margin-bottom: 25px;
+      color: #ecf0f1;
+      font-size: 1.8em;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .form-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .form-group input {
+      width: calc(100% - 40px);
+      padding: 12px 12px 12px 40px;
+      border: 1px solid #6c8a9e;
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: #5c7a92;
+      color: #ecf0f1;
+      font-size: 1em;
+      transition: border-color 0.3s, background-color 0.3s;
+    }
+    .form-group input:focus {
+      border-color: #3498db;
+      background-color: #6c8a9e;
+      outline: none;
+    }
+    .form-group input::placeholder {
+      color: #bdc3c7;
+    }
+    .form-group .icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #bdc3c7;
+      font-size: 1.1em;
+    }
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      font-size: 0.9em;
+      color: #bdc3c7;
+    }
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 8px;
+      accent-color: #3498db;
+    }
+    .auth-btn {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #e74c3c;
+      color: white;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .auth-btn:hover {
+      background-color: #c0392b;
+      transform: translateY(-2px);
+    }
+    .register-btn {
+      background-color: #27ae60;
+    }
+    .register-btn:hover {
+      background-color: #229954;
+    }
+    .toggle-form {
+      margin-top: 20px;
+      color: #bdc3c7;
+      font-size: 0.9em;
+    }
+    .toggle-form a {
+      color: #f1c40f;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .toggle-form a:hover {
+      color: #e67e22;
+    }
+    .register-form {
+      display: none;
+    }
+    .footer-login {
+      margin-top: auto;
+      padding: 20px;
+      text-align: center;
+      color: #7f8c8d;
+      font-size: 0.85em;
+    }
+    .message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .success {
+      color: #2ecc71;
+    }
+    .error {
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="auth-container">
+    <img src="../assest/images/logo.jpg" alt="Logo Edui-Cientistas" class="logo-login">
+    
+    <div id="login-form">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <i class="fa-solid fa-envelope icon"></i>
+          <input type="email" id="login-email" placeholder="Ingresar correo electrónico" required>
+        </div>
+        <div class="form-group">
+          <i class="fa-solid fa-lock icon"></i>
+          <input type="password" id="login-password" placeholder="Ingresar password" required>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="show-password" onclick="togglePasswordVisibility('login-password')">
+          <label for="show-password">Mostrar contraseña</label>
+        </div>
+        <button type="submit" class="auth-btn">Iniciar sesión</button>
+      </form>
+      <p id="loginMessage" class="message"></p>
+      <p class="toggle-form">¿Necesitas una cuenta? <a href="#" onclick="showRegisterForm()">Registrar</a></p>
+    </div>
+
+    <div id="register-form" class="register-form">
+      <h2>Registro</h2>
+      <form id="registerForm">
+        <div class="form-group">
+          <i class="fa-solid fa-envelope icon"></i>
+          <input type="email" id="register-email" placeholder="Ingresar correo electrónico" required>
+        </div>
+        <div class="form-group">
+          <i class="fa-solid fa-lock icon"></i>
+          <input type="password" id="register-password" placeholder="Crear nueva password" required>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="show-password-reg" onclick="togglePasswordVisibility('register-password')">
+          <label for="show-password-reg">Mostrar contraseña</label>
+        </div>
+        <button type="submit" class="auth-btn register-btn">Registrarse</button>
+      </form>
+      <p id="registerMessage" class="message"></p>
+      <p class="toggle-form">¿Ya tienes una cuenta? <a href="#" onclick="showLoginForm()">Iniciar Sesión</a></p>
+    </div>
+
+  </main>
+  
+  <footer class="footer-login">
+    <p>&copy; 2025 CRC Azcalcalli. Todos los derechos reservados | Diseño de CRC</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+  <script>
+    // CONFIGURACIÓN DE TU PROYECTO FIREBASE
+    const firebaseConfig = {
+      apiKey: "AIzaSyBHSuVbHeqX6LaspaLZ5DQmkPCz71OcHko",
+      authDomain: "azcalcalli.firebaseapp.com",
+      projectId: "azcalcalli",
+      storageBucket: "azcalcalli.firebasestorage.app",
+      messagingSenderId: "503194456148",
+      appId: "1:503194456148:web:301a5a547866dca199ddc1"
+    };
+    
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+    const registerForm = document.getElementById('registerForm');
+    const loginForm = document.getElementById('loginForm');
+    const registerMessage = document.getElementById('registerMessage');
+    const loginMessage = document.getElementById('loginMessage');
+
+    function showRegisterForm() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('register-form').style.display = 'block';
+      registerMessage.textContent = '';
+    }
+
+    function showLoginForm() {
+      document.getElementById('login-form').style.display = 'block';
+      document.getElementById('register-form').style.display = 'none';
+      loginMessage.textContent = '';
+    }
+
+    function togglePasswordVisibility(fieldId) {
+      const passwordField = document.getElementById(fieldId);
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+      } else {
+        passwordField.type = 'password';
+      }
+    }
+
+    // Lógica de Registro
+    registerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = registerForm['register-email'].value;
+      const password = registerForm['register-password'].value;
+      
+      auth.createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          registerMessage.textContent = '¡Registro exitoso! Ya puedes iniciar sesión.';
+          registerMessage.className = 'message success';
+          registerForm.reset();
+          showLoginForm();
+        })
+        .catch((error) => {
+          let errorMessage = 'Ocurrió un error. Por favor, intenta de nuevo.';
+          if (error.code === 'auth/email-already-in-use') {
+            errorMessage = 'Ese correo electrónico ya está registrado.';
+          } else if (error.code === 'auth/invalid-email') {
+            errorMessage = 'La dirección de correo electrónico es inválida.';
+          } else if (error.code === 'auth/weak-password') {
+            errorMessage = 'La contraseña debe tener al menos 6 caracteres.';
+          }
+          registerMessage.textContent = `Error: ${errorMessage}`;
+          registerMessage.className = 'message error';
+        });
+    });
+
+    // Lógica de Inicio de Sesión
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = loginForm['login-email'].value;
+      const password = loginForm['login-password'].value;
+      
+      auth.signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          loginMessage.textContent = '¡Inicio de sesión exitoso! Redirigiendo...';
+          loginMessage.className = 'message success';
+          // Redirigir al usuario a la página principal
+          window.location.href = 'principal.html'; 
+        })
+        .catch((error) => {
+          let errorMessage = 'Ocurrió un error. Por favor, intenta de nuevo.';
+          if (error.code === 'auth/invalid-email' || error.code === 'auth/user-not-found') {
+            errorMessage = 'Correo electrónico no encontrado o inválido.';
+          } else if (error.code === 'auth/wrong-password') {
+            errorMessage = 'La contraseña es incorrecta.';
+          }
+          loginMessage.textContent = `Error: ${errorMessage}`;
+          loginMessage.className = 'message error';
+        });
+    });
+  </script>
+</body>
+</html>

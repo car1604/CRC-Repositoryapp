@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia de Desastres Naturales</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .trivia-container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #e7e8e8;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .trivia-header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #279af8;
+        }
+        .question-box {
+            background-color: #4ccdf1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        #question-text {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+        .options-container {
+            display: grid;
+            gap: 10px;
+        }
+        .option-btn {
+            background-color: #FFEB3B;
+            border: none;
+            padding: 15px;
+            text-align: left;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .option-btn:hover {
+            background-color: #59e4e4;
+        }
+        .option-btn.correct {
+            background-color: #81C784;
+            color: white;
+        }
+        .option-btn.wrong {
+            background-color: #E53935;
+            color: white;
+        }
+        #result-message {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        #next-btn {
+            display: none;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="../principal.html" class="back-link">&#8592;</a>
+        <div class="logo-container">
+            <img src="../assest/images/logo.jpg" alt="Logo Educietistas" class="logo">
+            <div class="title-section">
+                <h2>Edui-Cientistas OSC</h2>
+                <p>Trivia</p>
+            </div>
+        </div>
+    </header>
+    
+    <main class="trivia-container">
+        <h2 class="trivia-header">Trivia de Desastres Naturales</h2>
+        <div class="question-box">
+            <p id="question-text">Cargando pregunta...</p>
+        </div>
+        <div class="options-container" id="options-container">
+            </div>
+        <p id="result-message"></p>
+        <button id="next-btn">Siguiente Pregunta</button>
+    </main>
+    
+    <script src="../main.js"></script>
+</body>
+</html>

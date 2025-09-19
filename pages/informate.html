@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infórmate</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .informate-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .informate-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .informate-header .back-arrow {
+            font-size: 2em;
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+        }
+        .informate-content {
+            background-color: #f7d242;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .fact-bubble {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px solid #E53935;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .fact-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 15px 0 0;
+            border-color: #E53935 transparent transparent transparent;
+        }
+        .fact-bubble h3 {
+            color: #E53935;
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .fact-bubble p {
+            margin: 5px 0 0;
+            font-weight: bold;
+        }
+        .section-box {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .section-box h4 {
+            color: #E53935;
+            margin: 0 0 10px;
+            border-bottom: 2px solid #E53935;
+            padding-bottom: 5px;
+        }
+        .steps {
+            background-color: #f7d242;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .step-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .step-card h5 {
+            margin: 0 0 5px;
+        }
+        .step-card p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="informate-header">
+        <a href="../principal.html" class="back-arrow">&#8592;</a>
+        <div class="logo-container">
+            <img src="../assest/images/logo.jpg" alt="Logo Azcalcalli" class="logo">
+            <div class="title-section">
+                <h2>Edui-Cientistas OSC</h2>
+                <p>Infórmate</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="informate-container">
+        <div class="informate-content">
+            <div class="fact-bubble">
+                <h3>¿Sabías que...?</h3>
+                <p>¡LOS SISMOS NO SE PUEDEN PREDECIR!</p>
+            </div>
+            
+            <div class="section-box">
+                <h4>¿QUÉ SABEMOS?</h4>
+                <p><strong>Nicaragua</strong> se encuentra en una región con actividad sísmica y volcánica alta, debido a su ubicación geográfica en el Cinturón de Fuego del Pacífico.</p>
+            </div>
+            
+            <div class="section-box">
+                <h4>¿CUÁNDO?</h4>
+                <p>Imposible saberlo.</p>
+            </div>
+            
+            <div class="section-box">
+                <h4>¿QUÉ DEBEMOS HACER?</h4>
+                <p>Prepararnos y saber qué hacer <strong>antes, durante y después</strong>.</p>
+            </div>
+        </div>
+        </section>
+    </main>
+</body>
+</html>
